@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -54,6 +55,9 @@ public class FlightTest {
 		objReserve.reserve();
 		objPurchase.purchase("XYZ", "123 Main St", "Bangalore", "Karnataka", "12345","Visa", "11", "2017", "John Smith");
 		objConfirmation.confirmation();
+		String ExpectedTitle = null;
+		
+		Assert.assertNotNull(objConfirmation.ID(), ExpectedTitle);
 	}
 	@AfterTest
 	public void tearDown() {

@@ -28,17 +28,12 @@ public class Confirmation {
 
 
 	//method to verify id
-	public void ID() {
-		if(Id.isDisplayed()) {
-			if(Id.getText().isEmpty()) {
-				System.out.println("Id is not generated");
-			}
-			else
-				System.out.println("ID is generated");
-			System.out.println(Id.getText());
+	public String ID() {
+		String ActualID = Id.getText();
+		return ActualID;
 		}
 
-	}
+	
 	//method exposed to FlightTest test case
 	public void confirmation() {
 		this.ID();

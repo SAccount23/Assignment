@@ -1,5 +1,6 @@
 package WeatherMap_API.WeatherMap;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import static com.jayway.restassured.RestAssured.*;
 
@@ -20,15 +21,8 @@ public class WeatherAPIGetRequests {
 				param("appid", "4fbf1f2b9a4075aae742406753f09a22").
 				when().
 				get("http://api.openweathermap.org/data/2.5/box/city");
-		if(resp.getStatusCode()==200) {
-			System.out.println("API is working fine");
-		}
-		else
-		{
-			if(resp.getStatusCode()==401) {
-				System.out.println("API is not working fine");
-			}
-		}
+				Assert.assertEquals(resp.getStatusCode(), 200);
+		
 
 	}		
 
@@ -43,15 +37,7 @@ public class WeatherAPIGetRequests {
 				param("appid", "4fbf1f2b9a4075aae742406753f09a22").
 				when().
 				get("http://api.openweathermap.org/data/2.5/find");
-		if(resp.getStatusCode()==200) {
-			System.out.println("API is working fine");
-		}
-		else
-		{
-			if(resp.getStatusCode()==401) {
-				System.out.println("API is not working fine");
-			}
-		}
+				Assert.assertEquals(resp.getStatusCode(), 200);
 
 	}		
 
