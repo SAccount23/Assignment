@@ -1,0 +1,48 @@
+Test Cases for Login Page
+
+URL: https://blazedemo.com/login
+
+Test Cases:
+
+1. Verify that the login page has 
+a. E-Mail Address Textbox
+b. Password Textbox
+c. Login Button
+d. Remember Me checkbox
+e. Login Link
+f. Register Link
+g. Forgot Your Password? Link
+h. BlazeDemo text at top left corner
+i. Login at top of the frame
+
+2. Verify that user is not able to login to with blank user name and password, i.e. both fields are mandatory.
+3. Verify that cursor is focused on "E-Mail Address" textbox when opening the page.
+4. Verify tab functionality: it should move to subsequent values
+5. Verify tooltip text is displayed correctly when hovering over E-Mail Address and Password textbox
+6. Verify Enter works as substitute of Login Button.
+7. Verify minimum and maximum length for the textboxes.
+8. Verify Login button functionality
+9. Verify user is able to login with valid credentials.
+11. Verify Password is in encrypted form.
+12. Verify tooltip text if entering invalid E-Mail Address.
+13. Verify tooltip text when entering E-Mail address but keeping Password blank and click on Login Button.
+14. Verify tooltip text when keeping E-Mail address blank and entering Password value and click on Login Button.
+15. Verify clicking on Register link, shows below details to fill:
+a. Name Textbox
+b. Company Textbox
+c. E-Mail Address Textbox
+d. Password textbox
+e. Confirm Password textbox
+f. Register Button
+16. Verify clicking on "Forgot Your Password?" Link opens the corresponding page with below fields:
+a. E-Mail Address textbox
+b. Send Password Reset Link button
+17. Verify clicking on "Login" link opens login page.
+18. Verify "Remember Me" checkbox is unchecked by default.
+19. Verify page source to check if any confidential information is displayed.
+20. Verify spaces should not be allowed in password
+21. Verify copying the password field value is not allowed and if allowed should not show the password.
+22. Verify number of attempts to login
+23. Verify complete E-Mail Address is not case sensitive.
+
+
